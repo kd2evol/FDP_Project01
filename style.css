@@ -1,0 +1,119 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #0055b7;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #e0e0e0;
+}
+
+h2, h3 {
+  color: #002f6c;
+  text-align: center; /* Center the h2 and h3 */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header Section */
+.header {
+  background-color: #0055b7;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+
+/* Section Styling */
+section {
+  padding: 40px 0;
+}
+
+/* Flexbox for Sections */
+.education, .experience, .projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added transition */
+  flex: 1 1 calc(33% - 20px); /* Flexbox for equal distribution */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Elevation on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Progress Bar */
+.progress-bar {
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 20px;
+  margin: 10px 0;
+  position: relative;
+}
+
+.progress-bar div {
+  height: 100%;
+  background: linear-gradient(90deg, #ffffff, #0055b7);
+  text-align: center;
+  line-height: 20px;
+  border-radius: 4px;
+  width: 0;
+  transition: width 1.5s ease-in-out;
+}
+
+.percentage {
+  color: #002f6c;
+  font-weight: bold;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+/* Footer */
+.footer {
+  background-color: #0055b7;
+  text-align: center;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.footer p {
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .card {
+    flex: 1 1 100%; /* Stack cards vertically on small screens */
+  }
+}
